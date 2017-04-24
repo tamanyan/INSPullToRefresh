@@ -28,7 +28,7 @@
 extern CGFloat const INSPullToRefreshDefaultResetContentInsetAnimationTime;
 extern CGFloat const INSPullToRefreshDefaultDragToTriggerOffset;
 
-typedef void(^INSPullToRefreshActionHandler)(UIScrollView *scrollView);
+typedef void(^INSPullToRefreshActionHandler)(UIScrollView * _Nonnull scrollView);
 
 typedef NS_ENUM(NSUInteger, INSPullToRefreshBackgroundViewState) {
     INSPullToRefreshBackgroundViewStateNone = 0,
@@ -40,18 +40,18 @@ typedef NS_ENUM(NSUInteger, INSPullToRefreshBackgroundViewState) {
 
 @protocol INSPullToRefreshBackgroundViewDelegate <NSObject>
 @optional
-- (void)pullToRefreshBackgroundView:(INSPullToRefreshBackgroundView *)pullToRefreshBackgroundView didChangeState:(INSPullToRefreshBackgroundViewState)state;
+- (void)pullToRefreshBackgroundView:(nonnull INSPullToRefreshBackgroundView *)pullToRefreshBackgroundView didChangeState:(INSPullToRefreshBackgroundViewState)state;
 
-- (void)pullToRefreshBackgroundView:(INSPullToRefreshBackgroundView *)pullToRefreshBackgroundView didChangeTriggerStateProgress:(CGFloat)progress;
+- (void)pullToRefreshBackgroundView:(nonnull INSPullToRefreshBackgroundView *)pullToRefreshBackgroundView didChangeTriggerStateProgress:(CGFloat)progress;
 
 @end
 
 @interface INSPullToRefreshBackgroundView : UIView
 
-@property (nonatomic, copy) INSPullToRefreshActionHandler actionHandler;
-@property (nonatomic, weak, readonly) UIScrollView *scrollView;
+@property (nullable, nonatomic, copy) INSPullToRefreshActionHandler actionHandler;
+@property (nullable, nonatomic, weak, readonly) UIScrollView *scrollView;
 
-@property (nonatomic, weak) id <INSPullToRefreshBackgroundViewDelegate> delegate;
+@property (nullable, nonatomic, weak) id <INSPullToRefreshBackgroundViewDelegate> delegate;
 
 @property (nonatomic, readonly) INSPullToRefreshBackgroundViewState state;
 @property (nonatomic, assign) BOOL preserveContentInset;
@@ -62,7 +62,7 @@ typedef NS_ENUM(NSUInteger, INSPullToRefreshBackgroundViewState) {
 
 @property (nonatomic, assign) BOOL enabled;
 
-- (instancetype)initWithHeight:(CGFloat)height scrollView:(UIScrollView *)scrollView;
+- (nonnull instancetype)initWithHeight:(CGFloat)height scrollView:(nullable UIScrollView *)scrollView;
 
 - (void)beginRefreshing;
 - (void)endRefreshing;

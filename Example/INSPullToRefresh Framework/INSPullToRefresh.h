@@ -19,5 +19,5 @@ FOUNDATION_EXPORT const unsigned char INSPullToRefresh_FrameworkVersionString[];
 #import <INSPullToRefresh/INSInfiniteScrollBackgroundView.h>
 #import <INSPullToRefresh/INSPullToRefreshBackgroundView.h>
 #import <INSPullToRefresh/UIScrollView+INSPullToRefresh.h>
-
-
+#import <INSPullToRefresh/INSDefaultPullToRefresh.h>
+#import <INSPullToRefresh/INSDefaultInfiniteIndicator.h>

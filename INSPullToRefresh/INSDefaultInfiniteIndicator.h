@@ -10,6 +10,6 @@
 #import "INSAnimatable.h"
 
 @interface INSDefaultInfiniteIndicator : UIView <INSAnimatable>
-@property (nonatomic, strong, readonly) UIActivityIndicatorView *activityIndicator;
+@property (nonnull, nonatomic, strong, readonly) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, assign, readonly) BOOL isAnimating;
 @end

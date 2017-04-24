@@ -31,10 +31,10 @@
 
 #pragma mark - INSPullToRefresh
 
-@property (nonatomic, strong, readonly) INSPullToRefreshBackgroundView *ins_pullToRefreshBackgroundView;
-@property (nonatomic, strong, readonly) INSInfiniteScrollBackgroundView *ins_infiniteScrollBackgroundView;
+@property (nonnull, nonatomic, strong, readonly) INSPullToRefreshBackgroundView *ins_pullToRefreshBackgroundView;
+@property (nonnull, nonatomic, strong, readonly) INSInfiniteScrollBackgroundView *ins_infiniteScrollBackgroundView;
 
-- (void)ins_addPullToRefreshWithHeight:(CGFloat)height handler:(INSPullToRefreshActionHandler)actionHandler;
+- (void)ins_addPullToRefreshWithHeight:(CGFloat)height handler:(nullable INSPullToRefreshActionHandler)actionHandler;
 - (void)ins_removePullToRefresh;
 
 - (void)ins_setPullToRefreshEnabled:(BOOL)enabled;
@@ -44,7 +44,7 @@
 
 #pragma mark - INSInfinityScroll
 
-- (void)ins_addInfinityScrollWithHeight:(CGFloat)height handler:(INSInfinityScrollActionHandler)actionHandler;
+- (void)ins_addInfinityScrollWithHeight:(CGFloat)height handler:(nullable INSInfinityScrollActionHandler)actionHandler;
 - (void)ins_removeInfinityScroll;
 
 - (void)ins_setInfinityScrollEnabled:(BOOL)enabled;

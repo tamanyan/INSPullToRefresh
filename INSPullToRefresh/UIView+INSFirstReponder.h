@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (INSFirstReponder)
-- (UIViewController *)ins_firstResponderViewController;
+- (nullable UIViewController *)ins_firstResponderViewController;
 @end
